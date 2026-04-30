@@ -16,7 +16,7 @@ fi
 
 echo "Running migrations..."
 # We use --verbose to see the ACTUAL error if it fails
-php artisan migrate:fresh --force --no-interaction --verbose || { echo "Migration failed!"; exit 1; }
+php artisan migrate --force --no-interaction --verbose || { echo "Migration failed!"; exit 1; }
 
 echo "Starting Apache..."
 exec apache2-foreground
